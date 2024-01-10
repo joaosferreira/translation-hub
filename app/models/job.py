@@ -18,7 +18,7 @@ class JobBase(BaseModel):
 
 class Job(JobBase):
     id: int
-    status: JobStatus = JobStatus.UNASSIGNED
+    status: JobStatus
 
     class Config:
         from_attributes = True

@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from models.job import JobBase, JobStatus
+from models.job import JobBase
 
 from . import models as db_models
 
@@ -8,7 +8,7 @@ def get_job(db: Session, job_id: int):
     return db.query(db_models.Job).filter(db_models.Job.id == job_id).first()
 
 def create_job(db: Session, job: JobBase):
-    db_job = db_models.Job(**job.model_dump(), status=JobStatus.UNASSIGNED)
+    db_job = db_models.Job(**job.model_dump())
 
     db.add(db_job)
     db.commit()
