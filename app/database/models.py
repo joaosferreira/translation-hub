@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 
-from models.job import JobStatus
+from ..models.job import JobStatus
 
 Base = declarative_base()
 

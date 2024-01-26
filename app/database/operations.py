@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from models.job import JobBase
+from ..models.job import JobBase
 
 from . import models as db_models
 
